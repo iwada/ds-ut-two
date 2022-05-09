@@ -24,7 +24,7 @@ class General(Process):
         self.order = ""
     
     def run(self):
-        ThreadedServer(self.rpc_handler, self.port).start()
+        ThreadedServer(self.rpc_handler, port=self.port).start()
     
     def init_generals(self, generals):
         self.generals = set(generals)
